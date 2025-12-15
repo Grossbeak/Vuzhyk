@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Иконка 1:1. Буква V как голова ужа: цветная версия -->
+  <!-- Жёлтые пятна за глазами -->
+  <g fill="#ffcc33" opacity="1.0">
+    <circle cx="76" cy="92" r="14"/>
+    <circle cx="180" cy="92" r="14"/>
+  </g>
+  <!-- Челюсти (V) -->
+  <path d="M48 40 L128 208 L208 40" fill="none" stroke="#0d47a1" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Язык (красный) -->
+  <g fill="none" stroke="#d32f2f" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M128 208 v24"/>
+    <path d="M128 232 l10 10"/>
+    <path d="M128 232 l-10 10"/>
+  </g>
+  <!-- Глаза (чёрные вертикальные) -->
+  <g fill="#000000">
+    <ellipse cx="92" cy="92" rx="8" ry="12"/>
+    <ellipse cx="164" cy="92" rx="8" ry="12"/>
+  </g>
+</svg>
+
+

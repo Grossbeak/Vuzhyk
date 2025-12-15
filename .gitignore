@@ -1,0 +1,91 @@
+# Build directories
+build*/
+build-*/
+x64/
+x86/
+*.vcxproj.user
+*.vcxproj.user.*
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+!cmake/*.cmake
+
+# Compiled files
+*.obj
+*.o
+*.exe
+*.dll
+*.lib
+*.a
+*.pdb
+*.ilk
+*.exp
+*.tlog
+*.lastbuildstate
+
+# Qt
+*_autogen/
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.qmlc
+*.jsc
+
+# IDE
+.vs/
+.vscode/
+.VSCodeCounter/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+UpgradeLog.htm
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+build/
+*.egg
+
+# Distribution
+dist/
+*.7z
+*.zip
+*.tar.gz
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Runtime Python (bundled)
+runtime/python/
+
+# Install manifests
+install_manifest.txt
+
+# Backup files
+*.bak
+*.backup
+

@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <RootNamespace>Vuzhyk</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtVersion>5.12.12</QtVersion>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') OR !Exists('$(QtMsBuild)\Qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings"></ImportGroup>
+  <ImportGroup Label="Shared"></ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\Vuzhyk\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\Vuzhyk\</IntDir>
+    <TargetExt>.exe</TargetExt>
+    <TargetName>Vuzhyk</TargetName>
+    <WindowsTargetPlatformMinVersion>6.1</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\Vuzhyk\</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\Vuzhyk_intermediate\</IntDir>
+    <TargetExt>.exe</TargetExt>
+    <TargetName>Vuzhyk</TargetName>
+    <WindowsTargetPlatformMinVersion>6.1</WindowsTargetPlatformMinVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;QSCINTILLA_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\Qsci;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile />
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qscintilla2_qt5d.lib;Qt5Cored.lib;Qt5Guid.lib;Qt5Widgetsd.lib;Qt5Svgd.lib;Qt5Networkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <MinimumRequiredVersion>6.1</MinimumRequiredVersion>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;_CRT_SECURE_NO_WARNINGS;QSCINTILLA_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>GeneratedFiles\$(ConfigurationName);GeneratedFiles;$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSvg;$(QTDIR)\include\QtNetwork;$(QTDIR)\include\Qsci;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>qscintilla2_qt5.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5Svg.lib;Qt5Network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ForceSymbolReferences>%(ForceSymbolReferences)</ForceSymbolReferences>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <MinimumRequiredVersion>6.1</MinimumRequiredVersion>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(QTDIR)\include;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtCore;$(QTDIR)\include\QtSvg;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <QtMoc Include="src\AnimatedMenu.h" />
+    <QtMoc Include="src\CodeEditor.h" />
+    <QtMoc Include="src\ConsoleWidget.h" />
+    <QtMoc Include="src\HelpWidget.h" />
+    <QtMoc Include="src\MainWindow.h" />
+    <QtMoc Include="src\SettingsWidget.h" />
+    <QtMoc Include="src\TitleBar.h" />
+    <QtMoc Include="src\WindowFrameOverlay.h" />
+    <QtMoc Include="src\pyrobeditor\grideditor.h" />
+    <QtMoc Include="src\pyrobeditor\projectmodel.h" />
+    <QtMoc Include="src\pyrobeditor\PyrobEditorWidget.h" />
+    <QtMoc Include="src\sea\SnakeGame.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\AnimatedMenu.cpp" />
+    <ClCompile Include="src\CodeEditor.cpp" />
+    <ClCompile Include="src\ConsoleWidget.cpp" />
+    <ClCompile Include="src\HelpWidget.cpp" />
+    <ClCompile Include="src\MainWindow.cpp" />
+    <ClCompile Include="src\SettingsWidget.cpp" />
+    <ClCompile Include="src\TitleBar.cpp" />
+    <ClCompile Include="src\WindowFrameOverlay.cpp" />
+    <ClCompile Include="src\pyrobeditor\grideditor.cpp" />
+    <ClCompile Include="src\pyrobeditor\projectmodel.cpp" />
+    <ClCompile Include="src\pyrobeditor\PyrobEditorWidget.cpp" />
+    <ClCompile Include="src\sea\SnakeGame.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="app.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resources.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icons\logo\vuzhyk.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <Target Name="CopyQtDlls" AfterTargets="Build" Condition="'$(Configuration)'=='Debug'">
+    <ItemGroup>
+      <QtDlls Include="$(QTDIR)\bin\Qt5Cored.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Guid.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Widgetsd.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Networkd.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Svgd.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Networkd.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5PrintSupportd.dll" Condition="Exists('$(QTDIR)\bin\Qt5PrintSupportd.dll')" />
+      <QtDlls Include="$(QTDIR)\bin\qscintilla2_qt5d.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(QtDlls)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <MakeDir Directories="$(OutDir)platforms" />
+    <Copy SourceFiles="$(QTDIR)\plugins\platforms\qwindowsd.dll" DestinationFolder="$(OutDir)platforms" SkipUnchangedFiles="true" Condition="Exists('$(QTDIR)\plugins\platforms\qwindowsd.dll')" />
+    <Copy SourceFiles="$(QTDIR)\plugins\platforms\qwindows.dll" DestinationFolder="$(OutDir)platforms" SkipUnchangedFiles="true" Condition="!Exists('$(QTDIR)\plugins\platforms\qwindowsd.dll') AND Exists('$(QTDIR)\plugins\platforms\qwindows.dll')" />
+  </Target>
+  <Target Name="CopyQtDllsRelease" AfterTargets="Build" Condition="'$(Configuration)'=='Release'">
+    <ItemGroup>
+      <QtDlls Include="$(QTDIR)\bin\Qt5Core.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Gui.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Widgets.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Svg.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5Network.dll" />
+      <QtDlls Include="$(QTDIR)\bin\Qt5PrintSupport.dll" Condition="Exists('$(QTDIR)\bin\Qt5PrintSupport.dll')" />
+      <QtDlls Include="$(QTDIR)\bin\qscintilla2_qt5.dll" />
+    </ItemGroup>
+    <Copy SourceFiles="@(QtDlls)" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" />
+    <MakeDir Directories="$(OutDir)platforms" />
+    <Copy SourceFiles="$(QTDIR)\plugins\platforms\qwindows.dll" DestinationFolder="$(OutDir)platforms" SkipUnchangedFiles="true" Condition="Exists('$(QTDIR)\plugins\platforms\qwindows.dll')" />
+  </Target>
+  <!-- Копирование FilePicker.exe для Release -->
+  <Target Name="CopyFilePickerRelease" AfterTargets="CopyQtDllsRelease" Condition="'$(Configuration)'=='Release'">
+    <PropertyGroup>
+      <FilePickerSource>$(SolutionDir)$(Platform)\$(Configuration)\FilePicker\FilePicker.exe</FilePickerSource>
+    </PropertyGroup>
+    <Copy SourceFiles="$(FilePickerSource)" 
+          DestinationFolder="$(OutDir)" 
+          SkipUnchangedFiles="true"
+          Condition="Exists('$(FilePickerSource)')" />
+    <Message Text="FilePicker.exe copied to $(OutDir)" Condition="Exists('$(FilePickerSource)')" Importance="normal" />
+    <Warning Text="FilePicker.exe not found at $(FilePickerSource). Build FilePicker project first!" Condition="!Exists('$(FilePickerSource)')" />
+  </Target>
+  <!-- Копирование Python для Release -->
+  <Target Name="CopyPythonRelease" AfterTargets="CopyFilePickerRelease" Condition="'$(Configuration)'=='Release'">
+    <PropertyGroup>
+      <PythonSourceDir Condition="Exists('$(SolutionDir)..\vuzhyk\dist\python')">$(SolutionDir)..\vuzhyk\dist\python</PythonSourceDir>
+      <PythonSourceDir Condition="!Exists('$(SolutionDir)..\vuzhyk\dist\python') AND Exists('C:\Python38')">C:\Python38</PythonSourceDir>
+      <PythonSourceDir Condition="!Exists('$(SolutionDir)..\vuzhyk\dist\python') AND !Exists('C:\Python38') AND Exists('C:\Python39')">C:\Python39</PythonSourceDir>
+      <PythonSourceDir Condition="!Exists('$(SolutionDir)..\vuzhyk\dist\python') AND !Exists('C:\Python38') AND !Exists('C:\Python39') AND Exists('C:\Python310')">C:\Python310</PythonSourceDir>
+      <PythonDestDir>$(OutDir)python</PythonDestDir>
+    </PropertyGroup>
+    <MakeDir Directories="$(PythonDestDir)" Condition="!Exists('$(PythonDestDir)')" />
+    <!-- Копируем исполняемые файлы Python -->
+    <ItemGroup>
+      <PythonExes Include="$(PythonSourceDir)\python.exe" Condition="Exists('$(PythonSourceDir)\python.exe')" />
+      <PythonExes Include="$(PythonSourceDir)\pythonw.exe" Condition="Exists('$(PythonSourceDir)\pythonw.exe')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PythonExes)" 
+          DestinationFolder="$(PythonDestDir)" 
+          SkipUnchangedFiles="true"
+          Condition="'$(PythonSourceDir)' != ''" />
+    <!-- Копируем Python DLL -->
+    <ItemGroup>
+      <PythonDlls Include="$(PythonSourceDir)\python*.dll" Condition="Exists('$(PythonSourceDir)')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(PythonDlls)" 
+          DestinationFolder="$(PythonDestDir)" 
+          SkipUnchangedFiles="true"
+          Condition="'$(PythonSourceDir)' != ''" />
+    <!-- Копируем папки Lib и DLLs рекурсивно -->
+    <Exec Command="robocopy &quot;$(PythonSourceDir)\Lib&quot; &quot;$(PythonDestDir)\Lib&quot; /E /NFL /NDL /NJH /NJS /NP" 
+          Condition="'$(PythonSourceDir)' != '' AND Exists('$(PythonSourceDir)\Lib')"
+          IgnoreExitCode="true" />
+    <Exec Command="robocopy &quot;$(PythonSourceDir)\DLLs&quot; &quot;$(PythonDestDir)\DLLs&quot; /E /NFL /NDL /NJH /NJS /NP" 
+          Condition="'$(PythonSourceDir)' != '' AND Exists('$(PythonSourceDir)\DLLs')"
+          IgnoreExitCode="true" />
+    <Message Text="Python copied from $(PythonSourceDir) to $(PythonDestDir)" Condition="'$(PythonSourceDir)' != ''" Importance="normal" />
+    <Warning Text="Python directory not found. Please ensure Python is installed or available at $(SolutionDir)..\vuzhyk\dist\python" Condition="'$(PythonSourceDir)' == ''" />
+  </Target>
+  <!-- Копирование дополнительных Qt плагинов для Release -->
+  <Target Name="CopyQtPluginsRelease" AfterTargets="CopyPythonRelease" Condition="'$(Configuration)'=='Release'">
+    <PropertyGroup>
+      <QtPluginsSource>$(QTDIR)\plugins</QtPluginsSource>
+      <QtPluginsDest>$(OutDir)</QtPluginsDest>
+    </PropertyGroup>
+    <!-- Icon engines -->
+    <MakeDir Directories="$(QtPluginsDest)iconengines" Condition="Exists('$(QtPluginsSource)\iconengines')" />
+    <Copy SourceFiles="$(QtPluginsSource)\iconengines\qsvgicon.dll" 
+          DestinationFolder="$(QtPluginsDest)iconengines" 
+          SkipUnchangedFiles="true"
+          Condition="Exists('$(QtPluginsSource)\iconengines\qsvgicon.dll')" />
+    <!-- Image formats (только Release версии, без Debug) -->
+    <MakeDir Directories="$(QtPluginsDest)imageformats" Condition="Exists('$(QtPluginsSource)\imageformats')" />
+    <ItemGroup>
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qgif.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qgif.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qicns.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qicns.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qico.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qico.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qjpeg.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qjpeg.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qsvg.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qsvg.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qtga.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qtga.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qtiff.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qtiff.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qwbmp.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qwbmp.dll')" />
+      <ImageFormats Include="$(QtPluginsSource)\imageformats\qwebp.dll" Condition="Exists('$(QtPluginsSource)\imageformats\qwebp.dll')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(ImageFormats)" 
+          DestinationFolder="$(QtPluginsDest)imageformats" 
+          SkipUnchangedFiles="true" />
+    <!-- Styles (только Release версии, без Debug) -->
+    <MakeDir Directories="$(QtPluginsDest)styles" Condition="Exists('$(QtPluginsSource)\styles')" />
+    <ItemGroup>
+      <Styles Include="$(QtPluginsSource)\styles\qwindowsvistastyle.dll" Condition="Exists('$(QtPluginsSource)\styles\qwindowsvistastyle.dll')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Styles)" 
+          DestinationFolder="$(QtPluginsDest)styles" 
+          SkipUnchangedFiles="true" />
+    <!-- Translations (опционально) -->
+    <MakeDir Directories="$(QtPluginsDest)translations" Condition="Exists('$(QTDIR)\translations')" />
+    <ItemGroup>
+      <Translations Include="$(QTDIR)\translations\qt_*.qm" Condition="Exists('$(QTDIR)\translations')" />
+    </ItemGroup>
+    <Copy SourceFiles="@(Translations)" 
+          DestinationFolder="$(QtPluginsDest)translations" 
+          SkipUnchangedFiles="true" />
+    <Message Text="Qt plugins copied to $(QtPluginsDest)" Importance="normal" />
+  </Target>
+  <!-- Очистка промежуточных файлов из выходной папки Release -->
+  <Target Name="CleanIntermediateFiles" AfterTargets="CopyQtPluginsRelease" Condition="'$(Configuration)'=='Release'">
+    <!-- Удаляем промежуточные файлы сборки -->
+    <ItemGroup>
+      <FilesToDelete Include="$(OutDir)*.obj" />
+      <FilesToDelete Include="$(OutDir)*.pdb" Condition="'$(OutDir)' != ''" />
+      <FilesToDelete Include="$(OutDir)*.iobj" />
+      <FilesToDelete Include="$(OutDir)*.ipdb" />
+      <FilesToDelete Include="$(OutDir)*.res" />
+      <FilesToDelete Include="$(OutDir)*.tlog" />
+      <FilesToDelete Include="$(OutDir)*.log" />
+      <FilesToDelete Include="$(OutDir)*.recipe" />
+      <FilesToDelete Include="$(OutDir)*.vcxproj.*" />
+      <FilesToDelete Include="$(OutDir)qt\**\*" />
+      <FilesToDelete Include="$(OutDir)Vuzhyk.tlog\**\*" />
+    </ItemGroup>
+    <Delete Files="@(FilesToDelete)" ContinueOnError="true" />
+    <RemoveDir Directories="$(OutDir)qt" ContinueOnError="true" Condition="Exists('$(OutDir)qt')" />
+    <RemoveDir Directories="$(OutDir)Vuzhyk.tlog" ContinueOnError="true" Condition="Exists('$(OutDir)Vuzhyk.tlog')" />
+    <RemoveDir Directories="$(OutDir)obj" ContinueOnError="true" Condition="Exists('$(OutDir)obj')" />
+    <!-- Удаляем Debug версии плагинов (файлы с суффиксом 'd') -->
+    <ItemGroup>
+      <DebugPlugins Include="$(OutDir)imageformats\*d.dll" />
+      <DebugPlugins Include="$(OutDir)styles\*d.dll" />
+    </ItemGroup>
+    <Delete Files="@(DebugPlugins)" ContinueOnError="true" />
+    <Message Text="Intermediate files and Debug plugins cleaned from $(OutDir)" Importance="normal" />
+  </Target>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

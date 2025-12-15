@@ -1,0 +1,34 @@
+<RCC>
+  <qresource prefix="/icons">
+    <file>icons/light-theme/file-new.svg</file>
+    <file>icons/light-theme/file-open.svg</file>
+    <file>icons/light-theme/file-save.svg</file>
+    <file>icons/light-theme/file-save-all.svg</file>
+    <file>icons/light-theme/cut.svg</file>
+    <file>icons/light-theme/copy.svg</file>
+    <file>icons/light-theme/paste-clipboard.svg</file>
+    <file>icons/light-theme/undo.svg</file>
+    <file>icons/light-theme/redo.svg</file>
+    <file>icons/light-theme/play.svg</file>
+    <file>icons/light-theme/stop.svg</file>
+    <file>icons/light-theme/bug.svg</file>
+    <file>icons/light-theme/next-bug.svg</file>
+    <file>icons/light-theme/run-in-terminal.svg</file>
+    <file>icons/light-theme/arrow-right.svg</file>
+    <file>icons/light-theme/arrow-down.svg</file>
+    <file>icons/logo/vuzhyk.ico</file>
+    <file>icons/logo/py.ico</file>
+    <file>icons/window-controls/window-minimize.svg</file>
+    <file>icons/window-controls/window-maximize.svg</file>
+    <file>icons/window-controls/window-restore.svg</file>
+    <file>icons/window-controls/window-close.svg</file>
+    <file>icons/window-controls/window-minimize-hover.svg</file>
+    <file>icons/window-controls/window-maximize-hover.svg</file>
+    <file>icons/window-controls/window-restore-hover.svg</file>
+    <file>icons/window-controls/window-close-hover.svg</file>
+    <file>icons/window-controls/settings-gear.svg</file>
+    <file>icons/window-controls/settings-gear-hover.svg</file>
+  </qresource>
+</RCC>
+
+
