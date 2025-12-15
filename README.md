@@ -1,4 +1,4 @@
-# Vuzhyk IDE
+# Vuzhyk IDE [![Website](https://img.shields.io/badge/Website-Open%20Project-blue?style=for-the-badge)](https://vuzhyk.by)
 
 Современная интегрированная среда разработки (IDE) для Python с поддержкой отладки, автодополнения и редактора задач pyrob.
 
